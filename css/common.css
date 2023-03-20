@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean');
+
+/* base */
+*{ margin: 0; padding: 0; color: #333; font-family: 'Nanum Gothic', sans-serif; font-size: 12px; font-weight: 400; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{ display: block; }
+label.away{ position: absolute; left: -999em; }
+address{ font-style: normal; }
+
+/* pc */
+@media screen and (min-width:1024px){
+    /* header */
+    header{ width: 100%; height: 120px; background-color: #fff; border-top: 10px solid #58332e; box-sizing: border-box; position: fixed; z-index: 4000;}
+    header .wrap{ height: 120px; }
+    header h1{ float: left; width: 23.7%; height: 42px; margin-top: 40px; }
+    header h1 a{ display: block; width: 200px; height: 42px; background-image: url(../images/common/header_logo.png); background-repeat: no-repeat; background-position: left center; } 
+    header .gnb{ float: left; width: 61%; height: 70px; line-height: 50px; margin-top: 40px; }
+    header .gnb > li{ float: left; width: 20%; text-align: center; position: relative; z-index: 3500;  }
+    header .gnb > li > a{ display: block; width: 100%; font-size: 20px; font-weight: 700; }
+    header .gnb > li > a:hover{ color: #911f90; }
+    header .gnb > li > a:hover:after{ display: block; content: ''; width: 30px; height: 2px; background-color: #911f90; margin: -5px auto 0; }
+    header .gnb > li > a:focus:after{ display: block; content: ''; width: 30px; height: 2px; background-color: #911f90; margin: -5px auto 0; background-color: #911f90; }
+    header .rightnav{ float: right; line-height: 50px; margin-top: 40px;}
+    header .rightnav li{ float: left;  }
+    header .rightnav .login{ margin-right: 15px;}
+    header .rightnav .login:after{ content: '|'; font-size: 11px; position: relative; left: 8px; font-weight: 700; }
+    header .rightnav li a{ font-size: 12px; color: #333; }
+    header h1 a img{ display: none; }
+    header .tmenu{ display: none; }
+    header .rightnav li a img{ display: none; }
+    header .rightnav .mlogin, header .nav .msignin{ display: none; }
+    
+    /* gnb */
+    .subbg{ width: 100%; height: 240px; background-color: rgba(255,255,255,0.8); position: absolute; top: 110px; z-index: 1; }
+    .subnav{ position: absolute; width: 145px; height: 240px; top: 70px; z-index: 3; padding-top: 10px;  }
+    .subnav li{ width: 100%; }
+    .subnav li a{ font-size: 18px; font-weight: 700; color: #333; letter-spacing: -0.8px; }
+    .subnav li a:hover{ color: #911f90; }
+    .subnav li a:focus{ color: #911f90; }
+    
+    .subbg.active{ top: 75px; }
+    .subnav.active{ top: 60px; }
+    
+    /* header scroll */
+    header.on{ height: 80px; border-top: 5px solid #58332e; }
+    header.on .wrap{ height: 70px; }
+    header.on h1{ margin-top: 15px; }
+    header.on .gnb{ margin-top: 15px; }
+    header.on .rightnav{ margin-top: 15px; }
+    
+    /* footer */
+    footer{ width: 100%; height: 340px; background-color: #f7f1f0; border-top: 5px solid #4f322c; box-sizing: border-box; padding-top: 50px;  }
+    footer h1{ width: 230px; height: 41px; margin: 0 auto; background-position: center; background-repeat: no-repeat; background-image: url(../images/common/footer_logo.png); text-indent: -999em; margin-bottom: 40px; }
+    footer .fnav { width: 100%; text-align: center; margin-bottom: 35px; }
+    footer .fnav li{ display: inline-block; margin-right: 20px; }
+    footer .fnav .navlast{ margin-right: 0; }
+    footer .fnav .navlast:after{ content: ''; }
+    footer .fnav li a{ font-size: 15px; color: #666;  }
+    footer .fnav li:after{ content: '|'; font-size: 15px; position: relative; left: 11px; color: #666;  }
+    footer p{ font-size: 14px; text-align: center; color: #666; margin-bottom: 35px; }
+    footer .fsns{ width: 209px; margin: 0 auto; }
+    footer .fsns li{ width: 42px; height: 42px; display: inline-block; margin-right: 10px;  }
+    footer .fsns .fsns04{ margin-right: 0; }
+    footer .fsns li a{ display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-image: url(../images/common/footer_sns.png); }
+    footer .fsns .fsns02 a{ background-position: -42px; }
+    footer .fsns .fsns03 a{ background-position: -84px; }
+    footer .fsns .fsns04 a{ background-position: -126px; }
+    
+    /* panel */
+    .panel{ display: none; }
+}
+
+/* large pc */
+@media screen and (min-width: 1140px){
+    
+}
+@media screen and (min-width: 1180px){
+    /* header */
+    header .wrap{ width: 1180px; height: 110px; margin: 0 auto ; background-color: #fff; }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    /* bodywrap */
+    .bodywrap{ width: 100%; overflow: hidden; position: relative; }
+    .blackBg{ width: 100%; height: 100%; position: fixed; background-color: rgba(0,0,0,0.5); top: 0; left: 0; z-index: 1999; border-top: 5px solid #58332e; }
+    
+    /* panel */
+    .panel{ width: 374px; height: 100%; position: fixed; z-index: 2000; background-color: #fff; box-sizing: border-box; border-top: 5px solid #58332e; overflow-y: scroll; }
+    .panel .ptop{ width: 100%; height: 54px; border-bottom: 1px solid #ccc; box-sizing: border-box; position: relative; padding-top: 20px; margin-bottom: 40px; }
+    .panel .ptop .pclose{ width: 20px; height: 20px; position: absolute; top: 23px; left: 15px;  }
+    .panel .ptop .pclose{ background-image: url(../images/common/panel_close_btn.png); background-size: cover;  }
+    .panel .ptop .plogo{ width: 114px; height: 24px; margin: 0 auto;  }
+    .panel .ptop .plogo h1{ width: 100%; height: 100%; }
+    .panel .ptop .plogo h1 a{ display: block; width: 100%; height: 100%; background-image: url(../images/common/header_logo_tablet.png); background-size: cover; }
+    .panel .ptop .pjoin{ width: 15px; height: 16px; position: absolute; top: 25px; right: 32px; }
+    .panel .ptop .pjoin a{ display: block; width: 100%; height: 100%; background-image: url(../images/common/panel_signin_icon.png); background-size: cover; }
+    .panel .ptop .plogin{ width: 15px; height: 16px; position: absolute; top: 25px; right: 10px; }
+    .panel .ptop .plogin a{ display: block; width: 100%; height: 100%; background-image: url(../images/common/panel_login_icon.png); background-size: cover; }
+    .panel .pgnb{ width: 100%; overflow: hidden; }
+    .panel .pgnb > ul{ width: 100%;  }
+    .panel .pgnb > ul > li{ width: 100%; position: relative; margin-bottom: 20px; }
+    .panel .pgnb h2{ display: inline-block; font-size: 20px; font-weight: 800; color: #333; margin-left: 10px; box-sizing: border-box;  }
+    .panel .pgnb h2.on:after{ content: ''; display: block; width: 100%; height: 5px; background-color: #91308a; position: relative; top: 5px; }
+    .panel .pgnb h2.on{ color: #91308a; }
+    .panel .pgnb .pmicon{ display: block; width: 13px; height: 13px; background-repeat: no-repeat; background-image: url(../images/common/panel_plus_btn.png); background-size: 13px; background-position: center; position: absolute; top: 5px; right: 15px; }
+    .panel .pgnb .pmicon.on{ display: block; width: 13px; height: 13px; background-repeat: no-repeat; background-image: url(../images/common/panel_minus_btn.png); background-size: 13px; background-position: center; position: absolute; top: 5px; right: 15px; }
+    .panel .pgnb .psubnav{ width: 100%; overflow: hidden; background-color: #ededed; padding-left: 10px; box-sizing: border-box; margin-bottom: 20px; }
+    .panel .pgnb .psubnav li{ width: 100%; line-height: 35px; }
+    .panel .pgnb .psubnav li a{ font-size: 15px; font-weight: 700; color: #666; }
+    .panel .picon{ width: 235px; height: 130px; margin: 0 auto; margin-top: 80px;   }
+    .panel .picon li{ width: 50px; height: 50px; float: left; margin-right: 40px; }
+    .panel .picon .picon03{ margin-right: 0; }
+    .panel .picon .picon02{ width: 55px; }
+    .panel .picon li a{ display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center; }
+    .panel .picon01 a{ background-image: url(../images/common/panel_icon01.png); background-size: 22px 25px; }
+    .panel .picon01 a:after{ content: 'ABOUT B & B'; text-align: center; display: block; position: relative; top: 50px;  }
+    .panel .picon02 a{ background-image: url(../images/common/panel_icon02.png); background-size: 20px 25px;  }
+    .panel .picon02 a:after{ content: 'NEAR BY STORES'; text-align: center; display: block; position: relative; top: 50px; }
+    .panel .picon03 a{ background-image: url(../images/common/panel_icon03.png); background-size: 25px 25px; }
+    .panel .picon03 a:after{ content: 'SHERE INFO'; text-align: center; display: block; position: relative; top: 50px; }
+    
+    /* header */
+    header{ width: 100%; height: 60px; border-top: 5px solid #58332e; box-sizing: border-box; padding-top: 20px; position: relative;  } 
+    header .gnb{ display: none; }
+    header h1{ width: 115px; margin: 0 auto; }
+    header h1 img{ width: 115px; }
+    header .tmenu{ width: 30px; position: absolute; top: 23px; left: 10px; }
+    header .rightnav{ position: absolute; top: 25px; right: 10px; }
+    header .rightnav li{ float: left; }
+    header .rightnav a{ font-size: 12px; }
+    header .rightnav .login{ margin-right: 15px; }
+    header .rightnav .login:after{ content: '|'; position: relative; left: 7px; }
+    header .rightnav li a img{ display: none; }
+    header .rightnav .mlogin, header .nav .msignin{ display: none; }
+    
+    /* footer */    
+    footer{ width: 100%; overflow: hidden;  background-color: #f7f1f0; border-top: 3px solid #4f322c; box-sizing: border-box; padding-top: 25px; padding-bottom: 25px;  }
+    footer h1{ width: 115px; height: 20px; margin: 0 auto; background-position: center; background-repeat: no-repeat; background-image: url(../images/common/footer_logo.png); background-size: cover; text-indent: -999em; margin-bottom: 20px; }
+    footer .fnav { width: 100%; text-align: center; margin-bottom: 18px; }
+    footer .fnav li{ display: inline-block; margin-right: 20px; }
+    footer .fnav .navlast{ margin-right: 0; }
+    footer .fnav .navlast:after{ content: ''; }
+    footer .fnav li a{ font-size: 12px; color: #666;  }
+    footer .fnav li:after{ content: '|'; font-size: 15px; position: relative; left: 11px; color: #666;  }
+    footer p{ font-size: 12px; text-align: center; color: #666; margin-bottom: 18px; }
+    footer .fsns{ width: 125px; margin: 0 auto; }
+    footer .fsns li{ width: 21px; height: 21px; display: inline-block; margin-right: 10px;  }
+    footer .fsns .fsns04{ margin-right: 0; }
+    footer .fsns li a{ display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-image: url(../images/common/footer_sns.png); background-size: 84px; }
+    footer .fsns .fsns02 a{ background-position: -21px; }
+    footer .fsns .fsns03 a{ background-position: -42px; }
+    footer .fsns .fsns04 a{ background-position: -64px; }
+}
+
+/* mobile */
+@media screen and (max-width: 767px){
+    /* bodywrap */
+    .bodywrap{ width: 100%; overflow: hidden; position: relative; }
+    .blackBg{ width: 100%; height: 100%; position: fixed; background-color: rgba(0,0,0,0.5); top: 0; left: 0; z-index: 1999; }
+    
+    /* panel */
+    .panel{ width: 100%; height: 100%; position: fixed; z-index: 2000; background-color: #fff; box-sizing: border-box; overflow-y: scroll; border-top: 5px solid #58332e;}
+    .panel .ptop{ width: 100%; height: 54px; border-bottom: 1px solid #ccc; box-sizing: border-box; position: relative; padding-top: 20px; margin-bottom: 40px; }
+    .panel .ptop .pclose{ width: 20px; height: 20px; position: absolute; top: 23px; left: 15px;  }
+    .panel .ptop .pclose{ background-image: url(../images/common/panel_close_btn.png); background-size: cover;  }
+    .panel .ptop .plogo{ width: 114px; height: 24px; margin: 0 auto;  }
+    .panel .ptop .plogo h1{ width: 100%; height: 100%; }
+    .panel .ptop .plogo h1 a{ display: block; width: 100%; height: 100%; background-image: url(../images/common/header_logo_tablet.png); background-size: cover; }
+    .panel .ptop .pjoin{ width: 15px; height: 16px; position: absolute; top: 25px; right: 32px; }
+    .panel .ptop .pjoin a{ display: block; width: 100%; height: 100%; background-image: url(../images/common/panel_signin_icon.png); background-size: cover; }
+    .panel .ptop .plogin{ width: 15px; height: 16px; position: absolute; top: 25px; right: 10px; }
+    .panel .ptop .plogin a{ display: block; width: 100%; height: 100%; background-image: url(../images/common/panel_login_icon.png); background-size: cover; }
+    .panel .pgnb{ width: 100%; overflow: hidden; }
+    .panel .pgnb > ul{ width: 100%; }
+    .panel .pgnb > ul > li{ width: 100%; position: relative; margin-bottom: 20px; }
+    .panel .pgnb h2{ display: inline-block; font-size: 20px; font-weight: 800; color: #333; margin-left: 10px; box-sizing: border-box; }
+    .panel .pgnb h2.on:after{ content: ''; display: block; width: 100%; height: 5px; background-color: #91308a; position: relative; top: 5px; }
+    .panel .pgnb h2.on{ color: #91308a;  }
+    .panel .pgnb .pmicon{ display: block; width: 13px; height: 13px; background-repeat: no-repeat; background-image: url(../images/common/panel_plus_btn.png); background-size: 13px; background-position: center; position: absolute; top: 2px; right: 15px; }
+    .panel .pgnb .pmicon.on{ display: block; width: 13px; height: 13px; background-repeat: no-repeat; background-image: url(../images/common/panel_minus_btn.png); background-size: 13px; background-position: center; position: absolute; top: 5px; right: 15px; }
+    .panel .pgnb .psubnav{ width: 100%; overflow: hidden; background-color: #ededed; padding-left: 10px; box-sizing: border-box; margin-bottom: 20px; }
+    .panel .pgnb .psubnav li{ width: 100%; line-height: 35px; }
+    .panel .pgnb .psubnav li a{ font-size: 15px; font-weight: 700; color: #666; }
+    .panel .picon{ width: 235px; height: 130px; margin: 0 auto; margin-top: 80px;   }
+    .panel .picon li{ width: 50px; height: 50px; float: left; margin-right: 40px; }
+    .panel .picon .picon03{ margin-right: 0; }
+    .panel .picon .picon02{ width: 55px; }
+    .panel .picon li a{ display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center; }
+    .panel .picon01 a{ background-image: url(../images/common/panel_icon01.png); background-size: 22px 25px; }
+    .panel .picon01 a:after{ content: 'ABOUT B & B'; text-align: center; display: block; position: relative; top: 50px;  }
+    .panel .picon02 a{ background-image: url(../images/common/panel_icon02.png); background-size: 20px 25px;  }
+    .panel .picon02 a:after{ content: 'NEAR BY STORES'; text-align: center; display: block; position: relative; top: 50px; }
+    .panel .picon03 a{ background-image: url(../images/common/panel_icon03.png); background-size: 25px 25px; }
+    .panel .picon03 a:after{ content: 'SHERE INFO'; text-align: center; display: block; position: relative; top: 50px; }
+    
+    /* header */
+    header{ width: 100%; height: 60px; border-top: 5px solid #58332e; box-sizing: border-box; padding-top: 20px; position: relative;  } 
+    header .gnb{ display: none; }
+    header h1{ width: 115px; margin: 0 auto; }
+    header h1 img{ width: 115px; }
+    header .tmenu{ width: 24px; position: absolute; top: 23px; left: 15px; }
+    header .rightnav{ position: absolute; top: 25px; right: 15px; }
+    header .rightnav li{ float: left; }
+    header .rightnav a{ font-size: 12px; }
+    header .rightnav .login{ margin-right: 15px; }
+    header .rightnav li a{ opacity: 0 ; }
+    header .rightnav .login, header .rightnav .signin{ display: none; }
+    header .rightnav li img{ width: 15px; }
+    header .rightnav .msignin{ margin-right: 15px; }
+    
+    /* footer */
+    footer{ width: 100%; overflow: hidden;  background-color: #f7f1f0; border-top: 3px solid #4f322c; box-sizing: border-box; padding-top: 20px; padding-bottom: 20px;  }
+    footer h1{ width: 115px; height: 20px; margin: 0 auto; background-position: center; background-repeat: no-repeat; background-image: url(../images/common/footer_logo.png); background-size: cover; text-indent: -999em; margin-bottom: 15px; }
+    footer .fnav { width: 100%; text-align: center; margin-bottom: 10px; }
+    footer .fnav li{ display: inline-block; margin-right: 20px; }
+    footer .fnav .navlast{ display: none;  }
+    footer .fnav .mlast{ margin-right: 0; }
+    footer .fnav .mlast:after{ content: ''; }
+    footer .fnav li a{ font-size: 12px; color: #666;  }
+    footer .fnav li:after{ content: '|'; font-size: 15px; position: relative; left: 11px; color: #666;  }
+    footer p{ font-size: 12px; text-align: center; color: #666; margin-bottom: 10px; }
+    footer .fsns{ width: 153px; margin: 0 auto; }
+    footer .fsns li{ width: 28px; height: 28px; display: inline-block; margin-right: 10px;  }
+    footer .fsns .fsns04{ margin-right: 0; }
+    footer .fsns li a{ display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-image: url(../images/common/footer_sns.png); background-size: 112px; }
+    footer .fsns .fsns02 a{ background-position: -28px; }
+    footer .fsns .fsns03 a{ background-position: -56px; }
+    footer .fsns .fsns04 a{ background-position: -84px; }
+} 
+
+/* iphone5 & se */
+@media screen and (max-width: 414px){
+    footer .fnav li a{ font-size: 11px; }
+}
